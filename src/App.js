@@ -4,6 +4,7 @@ import HeaderNavMenu from "./components/common/HeaderNavMenu";
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import "./scss/main.scss";
+import HeaderInfo from "./components/common/HeaderInfo";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Container maxWidth="md">
             <CssBaseline />
             <HeaderNavMenu />
+            <HeaderInfo />
             <Routes>
 
             </Routes>
