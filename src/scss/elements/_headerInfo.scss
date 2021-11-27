@@ -1,0 +1,45 @@
+.headerInfo_box {
+  display:flex;
+  justify-content: center;
+  background-color:rgba(108,108,233,0.1);
+  padding:10px;
+  width:100%;
+  @media (min-width: 485px) {
+    justify-content: space-around;
+  }
+  &_div {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    &:nth-child(1){
+      padding-right:5px;
+    }
+    &__icon {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &_note {
+    background-color:rgba(108,108,233,0.06);
+    margin-top:0;
+    &__content {
+      text-align:right;
+      font-size:7.5px;
+      margin:0;
+      padding-bottom:5px;
+      @media (min-width:485px){
+        font-size:9px;
+      }
+    }
+  }
+}
+.SunIcon {
+  color:#f9d71c;
+}
+.MoonIcon {
+  color:dimgrey;
+}
+.AccessIcon {
+  color:rgba(17, 16, 17, 0.7);
+}
