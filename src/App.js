@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { Routes} from "react-router";
+import { Routes,Route} from "react-router";
 import HeaderNavMenu from "./components/common/HeaderNavMenu";
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -13,12 +13,14 @@ function App() {
       <BrowserRouter>
         <Container maxWidth="md">
             <CssBaseline />
-            <HeaderNavMenu />
-            <HeaderInfo />
-            <Routes>
-
-            </Routes>
-            <Footer />
+                <HeaderNavMenu />
+                <HeaderInfo />
+                <Routes>
+                    <Route exact path="/" element={}/>
+                    <Route exact path="/danehydro" element={}/>
+                    <Route exact path="/danesynop" element={}/>
+                </Routes>
+                <Footer />
         </Container>
       </BrowserRouter>
   );
