@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import "./scss/main.scss";
 import HeaderInfo from "./components/common/HeaderInfo";
 import Footer from "./components/common/Footer";
+import Home from "./components/pages/Home";
 
 
 function App() {
@@ -16,9 +17,7 @@ function App() {
                 <HeaderNavMenu />
                 <HeaderInfo />
                 <Routes>
-                    <Route exact path="/" element={}/>
-                    <Route exact path="/danehydro" element={}/>
-                    <Route exact path="/danesynop" element={}/>
+                    <Route exact path="/" element={<Home/>}/>
                 </Routes>
                 <Footer />
         </Container>
@@ -27,3 +26,8 @@ function App() {
 }
 
 export default App;
+
+/*
+                    <Route exact path="/danehydro" element={}/>
+                    <Route exact path="/danesynop" element={}/>
+ */
