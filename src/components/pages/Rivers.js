@@ -38,9 +38,9 @@ const Rivers = () => {
                     >
                         <option>Wybierz</option>
                         {
-                            riversBig10.map(el => {
+                            riversBig10.map((el,index)=> {
                                 return (
-                                    <option value={el}>{el}</option>
+                                    <option key={index} value={el}>{el}</option>
                                 )
                             })
                         }
@@ -59,9 +59,9 @@ const Rivers = () => {
                     >
                         <option>Wybierz</option>
                         {
-                            otherRivers.map(el => {
+                            otherRivers.map((el,index) => {
                                 return (
-                                    <option value={el}>{el}</option>
+                                    <option key={index} value={el}>{el}</option>
                                 )
                             })
                         }
