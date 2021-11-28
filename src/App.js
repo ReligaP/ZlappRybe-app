@@ -8,6 +8,7 @@ import HeaderInfo from "./components/common/HeaderInfo";
 import Footer from "./components/common/Footer";
 import Home from "./components/pages/Home";
 import Rivers from "./components/pages/Rivers";
+import Weather from "./components/pages/Weather";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route exact path="/danehydro" element={<Rivers/>}/>
+                    <Route exact path="/danesynop" element={<Weather/>}/>
                 </Routes>
                 <Footer />
         </Container>
@@ -28,8 +30,3 @@ function App() {
 }
 
 export default App;
-
-/*
-                    <Route exact path="/danehydro" element={}/>
-                    <Route exact path="/danesynop" element={}/>
- */
