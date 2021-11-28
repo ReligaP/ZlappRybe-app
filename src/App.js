@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import "./scss/main.scss";
 import HeaderInfo from "./components/common/HeaderInfo";
+import Footer from "./components/common/Footer";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Routes>
 
             </Routes>
+            <Footer />
         </Container>
       </BrowserRouter>
   );
