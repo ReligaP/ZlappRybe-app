@@ -7,6 +7,7 @@ import "./scss/main.scss";
 import HeaderInfo from "./components/common/HeaderInfo";
 import Footer from "./components/common/Footer";
 import Home from "./components/pages/Home";
+import Rivers from "./components/pages/Rivers";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <HeaderInfo />
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
+                    <Route exact path="/danehydro" element={<Rivers/>}/>
                 </Routes>
                 <Footer />
         </Container>
