@@ -1,0 +1,46 @@
+.riversBox {
+  background-color: rgba(108,108,233,0.2);
+  padding:20px 0 10px 5px;
+  &_title {
+    padding:25px 0;
+  }
+  &_selectBox {
+    @media (min-width:485px) {
+      display:flex;
+      justify-content: space-around;
+    }
+    &__select {
+      margin-bottom:20px;
+      &:nth-child(2) {
+        @media (min-width:485px) {
+          margin-left:20px;
+        }
+      }
+    }
+  }
+  &_selectedList {
+    margin-top:20px;
+    list-style:none;
+    padding-left:20px;
+    &__title{
+      display:flex;
+      justify-content:center;
+      margin:25px 0;
+    }
+    &__items{
+      width: auto;
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
+    }
+  }
+}
+.selectedList_item {
+  margin-bottom:20px;
+  display:flex;
+  flex-direction:column;
+  &__paragraph {
+    margin:0;
+  }
+}
