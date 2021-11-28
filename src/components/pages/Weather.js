@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {MapContainer,TileLayer} from 'react-leaflet';
 import {Typography} from "@mui/material";
 import Button from '@mui/material/Button';
+import OpenWeatherApiKey from "../../database/OpenWeatherApiKey";
 
 
 const Weather = () => {
@@ -9,7 +10,7 @@ const Weather = () => {
     const [temp,setTemp] = useState([]);
     const [wind,setWind] =useState([]);
     const [clouds,setClouds] = useState([])
-    const ApiKey = `269edbbecf39bb851e5ad232775b7d50`;
+    const ApiKey = OpenWeatherApiKey;
     const API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pl&units=metric&appid=${ApiKey}`;
 
     useEffect(() => {
@@ -104,7 +105,6 @@ const Weather = () => {
                 }
             </div>
         </>
-
     );
 };
 
