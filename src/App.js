@@ -14,7 +14,7 @@ import Weather from "./components/pages/Weather";
 function App() {
   return (
       <BrowserRouter>
-        <Container maxWidth="md">
+        <Container maxWidth="md" disableGutters={true}>
             <CssBaseline />
                 <HeaderNavMenu />
                 <HeaderInfo />

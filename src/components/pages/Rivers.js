@@ -1,21 +1,25 @@
 import React,{useEffect,useState} from 'react';
-import {Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import {NativeSelect} from "@mui/material";
 import riversBig10 from "../../database/riversBig10";
 import otherRivers from "../../database/otherRivers";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+
 
 const Rivers = () => {
     const [river,SetRiver] = useState("Wisła");
     const [data,setData] = useState([]);
     const API = `https://danepubliczne.imgw.pl/api/data/hydro`;
+
     useEffect(() => {
         fetch(API)
             .then(res => res.json())
             .then(res => setData(res))
             .catch(err => console.log(err))
     },[]);
+
     return (
-        <div className="riversBox">
+        <Box className="riversBox">
             <Typography
                 variant="subtitle2"
                 color="black"
@@ -24,13 +28,13 @@ const Rivers = () => {
             >
                 Dane hydrologiczne udostępniane przez IMGW
             </Typography>
-            <div className="riversBox_selectBox">
-                <div className="riversBox_selectBox__select">
+            <Box className="riversBox_selectBox">
+                <Box className="riversBox_selectBox__select">
                     <Typography variant="body">
-                        Wybierz rzekę (10 największych)
+                        Wybierz rzekę (10 największych) :
                     </Typography>
                     <NativeSelect
-                        style={{marginLeft:"10px"}}
+                        className="nativeSelect"
                         inputProps={{
                             value: river,
                             onChange: e => SetRiver(e.target.value),
@@ -38,20 +42,20 @@ const Rivers = () => {
                     >
                         <option>Wybierz</option>
                         {
-                            riversBig10.map((el,index)=> {
+                            riversBig10.map((el,index) => {
                                 return (
                                     <option key={index} value={el}>{el}</option>
                                 )
                             })
                         }
                     </NativeSelect>
-                </div>
+                </Box>
                 <div className="riversBox_selectBox__select">
                     <Typography variant="body">
                         Mniejsze rzeki :
                     </Typography>
                     <NativeSelect
-                        style={{marginLeft:"10px"}}
+                        className="nativeSelect"
                         inputProps={{
                             value: river,
                             onChange: e => SetRiver(e.target.value),
@@ -67,18 +71,19 @@ const Rivers = () => {
                         }
                     </NativeSelect>
                 </div>
-            </div>
-            <ul className="riversBox_selectedList">
-                <div className="riversBox_selectedList__title">
-                    <Typography
-                        variant="h4"
-                        align="center"
+            </Box>
+            <Box className="riversBox_selectedListTitle">
+                <Typography
+                    variant="h4"
+                    align="center"
 
-                    >
-                        {river}
-                    </Typography>
-                </div>
-                <div className="riversBox_selectedList__items">
+                >
+                    {river}
+                </Typography>
+            </Box>
+            <Box className="riversBox_selectedList">
+
+                <ul className="riversBox_selectedList__items">
                     {
                         data.filter(el => (el.rzeka === river)
                         ).map((el,index) => {
@@ -97,17 +102,26 @@ const Rivers = () => {
                                         Data i godzina pomiaru : {el.stan_wody_data_pomiaru}
                                     </Typography>
                                     {
-                                        (el.temperatura_wody !== null) ? <p className="selectedList_item__paragraph">Temperatura wody : {el.temperatura_wody}
-                                                &nbsp;&ordm;C </p>
-                                            : <p className="selectedList_item__paragraph">Temperatura wody : Brak pomiaru</p>
+                                        (el.temperatura_wody !== null) ?
+                                            <p className="selectedList_item__paragraph">
+                                                Temperatura wody : {el.temperatura_wody}
+                                                &nbsp;&ordm;C
+                                            </p>
+                                            :
+                                            <p className="selectedList_item__paragraph">
+                                                Temperatura wody : Brak pomiaru
+                                            </p>
                                     }
                                 </li>
                             )
                         })
                     }
-                </div>
-            </ul>
-        </div>
+                </ul>
+                <Box className="riversBox_selectedList__link">
+                    <a href="#"><ArrowCircleUpIcon/></a>
+                </Box>
+            </Box>
+        </Box>
     );
 };
 
