@@ -5,6 +5,7 @@
     padding:25px 0;
   }
   &_selectBox {
+    padding-left:10px;
     @media (min-width:485px) {
       display:flex;
       justify-content: space-around;
@@ -18,21 +19,28 @@
       }
     }
   }
+  &_selectedListTitle {
+    display:flex;
+    justify-content:center;
+    margin:25px 0;
+  }
   &_selectedList {
     margin-top:20px;
     list-style:none;
-    padding-left:20px;
-    &__title{
-      display:flex;
-      justify-content:center;
-      margin:25px 0;
-    }
-    &__items{
-      width: auto;
+    &__items {
+      padding-left:25px;
       display:flex;
       flex-direction: column;
       justify-content:center;
-      align-items:center;
+      align-items:flex-start;
+      @media (min-width:485px) {
+        align-items:center;
+      }
+    }
+    &__link {
+      display:flex;
+      justify-content:flex-end;
+      width:90%;
     }
   }
 }
@@ -43,4 +51,7 @@
   &__paragraph {
     margin:0;
   }
+}
+.nativeSelect {
+  margin-left:10px;
 }
