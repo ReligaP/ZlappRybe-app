@@ -19,7 +19,7 @@
     margin-top:30px;
     border:1px solid black;
     @media (min-width:485px){
-      width:75%;
+      width:50%;
     }
     &__content {
       width:100%;
@@ -38,9 +38,18 @@
     justify-content:space-around;
     @media (min-width:485px){
       width:70%;
+      margin-top:40px;
+    }
+    &__form {
+      margin:25px 0;
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
     }
     &__input {
-      width:50%;
+      width:70%;
       padding:5px;
       @media (min-width:485px) {
         width:40%;
