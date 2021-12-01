@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {MapContainer,TileLayer} from 'react-leaflet';
 import {Typography} from "@mui/material";
 import Button from '@mui/material/Button';
-import OpenWeatherApiKey from "../../database/OpenWeatherApiKey";
+import OpenWeatherApiKey from "../../database/openWeatherApiKey";
 
 
 const Weather = () => {

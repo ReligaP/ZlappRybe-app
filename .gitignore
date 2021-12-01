@@ -22,8 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/database/OpenWeatherApiKey.js
 
 package-lock.json
 
 .idea
+
+/src/firebase/firebaseconfig.js
+/src/database/openWeatherApiKey.js
