@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {MapContainer,TileLayer} from 'react-leaflet';
 import {Box,Typography} from "@mui/material";
 import OpenWeatherApiKey from "../../database/openWeatherApiKey";
+import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 
 
 const Weather = () => {
@@ -112,6 +113,9 @@ const Weather = () => {
                         </Typography>
                     </Box>)
                 }
+                <Box className="weatherBox_link">
+                    <a href="#"><ArrowCircleUpIcon/></a>
+                </Box>
             </Box>
         </>
 

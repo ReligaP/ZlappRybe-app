@@ -81,6 +81,12 @@
       align-items:center;
     }
   }
+  &_link {
+    display:flex;
+    justify-content:flex-end;
+    width:80%;
+    padding-bottom:20px;
+  }
 }
 .data_item {
   font-weight:bold;
