@@ -5,7 +5,7 @@
 ### Features:
 * **Material UI**
 * **RWD**
-* * routing (**React Router**)
+* routing (**React Router**)
 * **Sass**
 * **SunCalc**
 * **Leaflet**
@@ -21,5 +21,7 @@
 3. `npm i`
 
 Create and replace your own firebaseconfig.js file in src/firebase directory.
+
 Then `npm start` for development mode, and `npm run build` for production.
+
 In development mode, localhost server will run on `localhost:3000` with autoreloading.
