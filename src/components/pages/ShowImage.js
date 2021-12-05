@@ -26,7 +26,6 @@ const ShowImage = (props) => {
                 <Typography
                     align="center"
                     variant="h6"
-                    className="showImageBox_title"
                     gutterBottom={true}
                 >
                     Twoje zdjęcia :
