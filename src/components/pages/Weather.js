@@ -56,7 +56,7 @@ const Weather = () => {
                     </MapContainer>
                 </Box>
                 <Box className="weatherBox_searchBox">
-                    <form style={{margin:"25px 0",width:"100%",display:"flex",flexDirection:"column",justifyContent:"center" ,alignItems:"center"}}>
+                    <form className="weatherBox_searchBox__form">
                         <Typography variant="h6">
                             Twoja miejscowość:
                         </Typography>
@@ -69,7 +69,8 @@ const Weather = () => {
                         />
                     </form>
                 </Box>
-                {(temp !== undefined && wind !== undefined && clouds !== undefined) ? (<Box className="weatherBox_data">
+                {(temp !== undefined && wind !== undefined && clouds !== undefined) ?
+                    (<Box className="weatherBox_data">
                         <Typography variant="h6" >
                             Aktualna sytuacja pogodowa:
                         </Typography>
