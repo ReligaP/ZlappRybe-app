@@ -26,7 +26,8 @@ const HeaderNavMenu = () => {
                         <MenuItem onClick={popupState.close}><Link to="/danesynop">Dane Meteo</Link></MenuItem>
                         <MenuItem onClick={popupState.close}><Link to="/dodajrelacje">Dodaj Relacje</Link></MenuItem>
                         <MenuItem onClick={popupState.close}><Link to="/twojerelacje">Pokaż Relacje</Link></MenuItem>
-                        <MenuItem onClick={popupState.close}><Link to="/logowanie">Zaloguj się</Link></MenuItem>
+                        <MenuItem onClick={popupState.close}><Link to="/zdjecia">Dodaj Zdjęcia</Link></MenuItem>
+                        <MenuItem onClick={popupState.close}><Link to="/wyswietlanie">Pokaż Zdjęcia</Link></MenuItem>
                         <MenuItem onClick={popupState.close}><Link to="/rejestracja">Zarejestruj się</Link></MenuItem>
                     </Menu>
                 </Box>

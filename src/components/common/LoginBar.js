@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import app from "../../firebase/firebaseconfig";
+import app from "../../firebase/firebaseConfig";
 import { getAuth, signOut} from "firebase/auth";
 import {Box, Typography} from "@mui/material";
 import CancelIcon from '@mui/icons-material/Cancel';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import {Link} from "react-router-dom";
 
 
 const LoginBar = (props) => {
@@ -32,6 +33,7 @@ const LoginBar = (props) => {
                 (<Box className="loginBarBox_unlogged">
                     <Typography variant="body2">Użytkownik niezalogowany&nbsp;</Typography>
                     <CancelIcon className="loginBarBox_unlogged__icon" fontSize="xsmall"/>
+                    <Link to="/logowanie"><Button size="small">&nbsp;Zaloguj się</Button></Link>
                 </Box>)
             }
         </Box>
