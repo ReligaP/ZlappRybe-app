@@ -8,7 +8,7 @@ const ShowRelation = (props) => {
 
     const [relation, setRelation] = useState([]);
 
-    useEffect(async () => {
+    useEffect(async() => {
         const db = getFirestore(app);
         const querySnapshot = await getDocs(collection(db, `/${props.local.localId}`));
         const tab = [];
@@ -16,7 +16,7 @@ const ShowRelation = (props) => {
             tab.push(doc.data());
         });
         setRelation(tab);
-    },[]);
+    });
 
     return (
         (props.email) ?
@@ -35,7 +35,7 @@ const ShowRelation = (props) => {
                             {
                                 relation.map((el,index)=> {
                                     return (
-                                        <Box className="showRelationBox_relations__content">
+                                        <Box key={index} className="showRelationBox_relations__content">
                                             <Box style={{marginBottom:"10px"}}>
                                                 <Typography variant="subtitle2">
                                                     Relacja nr. {index + 1}
