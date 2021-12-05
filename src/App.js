@@ -17,6 +17,8 @@ import {getAuth,onAuthStateChanged} from "firebase/auth";
 import app from "./firebase/firebaseconfig";
 import LoginBar from "./components/common/LoginBar";
 import SignIn from "./components/pages/SignIn";
+import AddImage from "./components/pages/AddImage";
+import ShowImage from "./components/pages/ShowImage"
 
 
 
@@ -52,6 +54,8 @@ function App() {
                     <Route exact path="/twojerelacje" element={<ShowRelation local={local} email={email}/>}/>
                     <Route exact path="/logowanie" element={<SignIn email={email}/>}/>
                     <Route exact path="/rejestracja" element={<Register/>} />
+                    <Route exact path="/zdjecia" element={<AddImage local={local} email={email}/>}/>
+                    <Route exact path="/wyswietlanie" element={<ShowImage local={local} email={email}/>}/>
                 </Routes>
                 <Footer />
             </Container>
