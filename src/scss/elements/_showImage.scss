@@ -1,6 +1,10 @@
 .showImageBox {
   background-color: rgba(108, 108, 233, 0.2);
-  padding: 40px 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &_content {
     display:flex;
     justify-content:center;
@@ -10,6 +14,35 @@
       width:80%;
       height:30%;
       margin-bottom:15px;
+    }
+  }
+  &_noContent {
+    width:90%;
+    height:calc(100vh - 432px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    @media (min-width:485px) {
+      padding-top: 100px;
+      align-items: flex-start;
+    }
+  }
+}
+
+
+.noShowImageBox {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:rgba(108,108,233,0.2);
+  height: calc(100vh - 333px);
+  @media (min-width:485px) {
+    justify-content: flex-start;
+  }
+  &_content {
+    @media (min-width:485px) {
+      padding-top:200px;
     }
   }
 }
