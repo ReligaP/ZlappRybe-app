@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "@mui/material/Button";
-import app from "../../firebase/firebaseConfig";
+import app from "../../firebase/firebaseconfig";
 import { getAuth, signOut} from "firebase/auth";
 import {Box, Typography} from "@mui/material";
 import CancelIcon from '@mui/icons-material/Cancel';

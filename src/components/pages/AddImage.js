@@ -81,10 +81,10 @@ const AddImage = (props) => {
                 </Box>
             </Box>
             :
-            <Box className="noShowImageBox">
+            <Box className="noAddImageBox">
                 <Typography
                     variant="h6"
-                    className="noShowImageBox_content"
+                    className="noAddImageBox_content"
                 >
                     Zaloguj się aby dodać swoje zdjęcia
                 </Typography>
