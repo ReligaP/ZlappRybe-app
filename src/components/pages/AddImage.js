@@ -7,10 +7,9 @@ import Typography from "@mui/material/Typography";
 
 
 const AddImage = (props) => {
+
     const [progress, setProgress] = useState(0);
     const [success,setSuccess] = useState(false);
-
-
 
     const formHandler = (e) => {
         e.preventDefault();
@@ -19,7 +18,6 @@ const AddImage = (props) => {
     };
 
     const uploadFiles = (file) => {
-
         if (!file) return;
         const storage=getStorage()
         const storageRef = ref(storage, `/files/${props.local.localId}/${file.name}`);
@@ -52,7 +50,12 @@ const AddImage = (props) => {
         (props.email) ?
             <Box className="addImageBox">
                 <Box className="addImageBox_content">
-                    <Typography variant="h6" align="center">Dodaj swoję zdjecia z wędkowania</Typography>
+                    <Typography
+                        variant="h6"
+                        align="center"
+                    >
+                        Dodaj swoję zdjecia z wędkowania
+                    </Typography>
                     <form
                         onSubmit={formHandler}
                         className="addImageBox_content__form"

@@ -3,17 +3,26 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState,{ bindTrigger, bindMenu } from 'material-ui-popup-state';
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 import {Box, Typography} from "@mui/material";
 
 const HeaderNavMenu = () => {
+
     return (
         <PopupState variant="popover" popupId="demo-popup-menu">
             {(popupState) => (
                 <Box className="headerNavMenuBox">
                     <Box className="headerNavMenuBox_logo">
-                        <Typography className="headerNavMenuBox_logo__title" variant="subtitle">Złapp</Typography>
-                        <Typography className="headerNavMenuBox_logo__title2" variant="subtitle">
+                        <Typography
+                            className="headerNavMenuBox_logo__title"
+                            variant="subtitle"
+                        >
+                            Złapp
+                        </Typography>
+                        <Typography
+                            className="headerNavMenuBox_logo__title2"
+                            variant="subtitle"
+                        >
                             &nbsp;&nbsp;Rybę<span className="headerNavMenuBox_logo__sign">&reg;</span>
                         </Typography>
                     </Box>
@@ -34,6 +43,6 @@ const HeaderNavMenu = () => {
             )}
         </PopupState>
     );
-}
+};
 
 export default HeaderNavMenu;

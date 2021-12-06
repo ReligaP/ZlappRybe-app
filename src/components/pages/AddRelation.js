@@ -170,7 +170,7 @@ const AddRelation = (props) => {
                 </Typography>
             </Box>
     )
-}
+};
 
 
 export default AddRelation;

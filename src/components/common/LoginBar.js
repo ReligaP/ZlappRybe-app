@@ -25,9 +25,16 @@ const LoginBar = (props) => {
         <Box className="loginBarBox">
             {props.email ?
                 (<Box className="loginBarBox_logged">
-                    <Typography variant="body">Witaj, {props.email}</Typography>
+                    <Typography variant="body">
+                        Witaj, {props.email}
+                    </Typography>
                     <CheckCircleIcon className="loginBarBox_logged__icon" fontSize="xsmall"/>
-                    <Button size="small" onClick={ClickHandler}> &nbsp;Wyloguj się</Button>
+                    <Button
+                        size="small"
+                        onClick={ClickHandler}
+                    >
+                        &nbsp;Wyloguj się
+                    </Button>
                 </Box>)
                 :
                 (<Box className="loginBarBox_unlogged">

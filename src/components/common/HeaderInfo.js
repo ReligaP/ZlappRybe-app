@@ -7,6 +7,7 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 const HeaderInfo =() => {
     const [info,setInfo]=useState([]);
     const API=`https://api.sunrise-sunset.org/json?lat=52.22977&lng=21.01178&date=today `;
+
     useEffect(() => {
         fetch(API)
             .then(res => res.json())
@@ -57,8 +58,10 @@ const HeaderInfo =() => {
                 </Box>
             </Box>
             <Box className="headerInfoBox_note">
-                <p className="headerInfoBox_note__content">* Dane dla miejscowości Piątek(woj.Łódzkie)
-                    -geograficzny środek Polski</p>
+                <p className="headerInfoBox_note__content"
+                >
+                    * Dane dla miejscowości Piątek(woj.Łódzkie) -geograficzny środek Polski
+                </p>
             </Box>
         </>
     )
