@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ZlappRybe-app/static/css/main.686699a3.chunk.css",
-    "main.js": "/ZlappRybe-app/static/js/main.526b922f.chunk.js",
-    "main.js.map": "/ZlappRybe-app/static/js/main.526b922f.chunk.js.map",
+    "main.js": "/ZlappRybe-app/static/js/main.94242f1a.chunk.js",
+    "main.js.map": "/ZlappRybe-app/static/js/main.94242f1a.chunk.js.map",
     "runtime-main.js": "/ZlappRybe-app/static/js/runtime-main.13ce6e9c.js",
     "runtime-main.js.map": "/ZlappRybe-app/static/js/runtime-main.13ce6e9c.js.map",
     "static/js/2.61033b58.chunk.js": "/ZlappRybe-app/static/js/2.61033b58.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.13ce6e9c.js",
     "static/js/2.61033b58.chunk.js",
     "static/css/main.686699a3.chunk.css",
-    "static/js/main.526b922f.chunk.js"
+    "static/js/main.94242f1a.chunk.js"
   ]
 }
