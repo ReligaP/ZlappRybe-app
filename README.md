@@ -1,6 +1,7 @@
 # Zlapp-Rybe
 
-### My first project in React.
+### My first project in React.Preview:
+https://religap.github.io/ZlappRybe-app/
 
 ### Features:
 * **Material UI**
@@ -14,6 +15,8 @@
   * data saved in **Cloud Firestore database**
 * Show relation :
   * data retrieved from **Cloud Firestore database**
+* Images :
+  * Images saved in / retrieved from **Firebase Storage**
 
 ### How to install:
 1. `git clone https://github.com/ReligaP/ZlappRybe-app.git`
