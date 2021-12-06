@@ -6,13 +6,13 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 const HeaderInfo =() => {
     const [info,setInfo]=useState([]);
-    const Api=`https://api.sunrise-sunset.org/json?lat=52.22977&lng=21.01178&date=today `;
+    const API=`https://api.sunrise-sunset.org/json?lat=52.22977&lng=21.01178&date=today `;
     useEffect(() => {
-        fetch(Api)
+        fetch(API)
             .then(res => res.json())
             .then(res => setInfo(res.results))
             .catch(err => console.log(err))
-    },[info]);
+    },[API]);
 
     const SunCalc = require('suncalc');
     const times = SunCalc.getTimes(new Date(), 52.06898, 19.47997);

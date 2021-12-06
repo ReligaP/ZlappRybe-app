@@ -8,15 +8,18 @@ const ShowRelation = (props) => {
 
     const [relation, setRelation] = useState([]);
 
-    useEffect(async() => {
-        const db = getFirestore(app);
-        const querySnapshot = await getDocs(collection(db, `/${props.local.localId}`));
-        const tab = [];
-        querySnapshot.forEach((doc) => {
-            tab.push(doc.data());
-        });
-        setRelation(tab);
-    });
+    useEffect(() => {
+        const getRelation = async () => {
+            const db = getFirestore(app);
+            const querySnapshot = await getDocs(collection(db, `/${props.local.localId}`));
+            const tab = [];
+            querySnapshot.forEach((doc) => {
+                tab.push(doc.data());
+            });
+            setRelation(tab);
+        }
+        getRelation()
+    },[props.local.localId]);
 
     return (
         (props.email) ?

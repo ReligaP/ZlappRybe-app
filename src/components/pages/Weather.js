@@ -19,19 +19,19 @@ const Weather = () => {
             .then(res => res.json())
             .then(res => setTemp(res.main))
             .catch(err => console.log(err))
-    },[city]);
+    },[API]);
     useEffect(() => {
         fetch(API)
             .then(res => res.json())
             .then(res => setWind(res.wind))
             .catch(err => console.log(err))
-    },[city]);
+    },[API]);
     useEffect(() => {
         fetch(API)
             .then(res => res.json())
             .then(res => setClouds(res.clouds))
             .catch(err => console.log(err))
-    },[city]);
+    },[API]);
 
 
     return (
@@ -115,7 +115,7 @@ const Weather = () => {
                     </Box>)
                 }
                 <Box className="weatherBox_link">
-                    <a href="#"><ArrowCircleUpIcon/></a>
+                    <a href={"#top"}><ArrowCircleUpIcon/></a>
                 </Box>
             </Box>
         </>

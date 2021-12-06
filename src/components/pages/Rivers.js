@@ -16,7 +16,7 @@ const Rivers = () => {
             .then(res => res.json())
             .then(res => setData(res))
             .catch(err => console.log(err))
-    },[]);
+    },[API]);
 
     return (
         <Box className="riversBox">
@@ -118,7 +118,7 @@ const Rivers = () => {
                     }
                 </ul>
                 <Box className="riversBox_selectedList__link">
-                    <a href="#"><ArrowCircleUpIcon/></a>
+                    <a href={"#top"}><ArrowCircleUpIcon/></a>
                 </Box>
             </Box>
         </Box>

@@ -8,7 +8,7 @@ import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 const Home = () => {
     return (
         <Box className="homeBox">
-            <Box id ="logo"className="homeBox_title">
+            <Box className="homeBox_title">
                 <Typography className="homeBox_title__content" variant="h4">Złapp</Typography>
                 <Typography className="homeBox_title__content2" variant="h4">Rybę</Typography>
             </Box>
@@ -49,7 +49,7 @@ const Home = () => {
                 </ul>
             </Box>
             <Box className="homeBox_link">
-                <a href="#"><ArrowCircleUpIcon/></a>
+                <a href={"#top"}><ArrowCircleUpIcon/></a>
             </Box>
         </Box>
     );
