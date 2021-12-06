@@ -2,6 +2,7 @@
   "name": "zlapp-rybe",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://religap.github.io/ZlappRybe-app/",
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
@@ -13,6 +14,7 @@
     "@testing-library/user-event": "^12.8.3",
     "babel": "^6.23.0",
     "firebase": "^9.5.0",
+    "gh-pages": "^3.2.3",
     "leaflet": "^1.7.1",
     "material-ui-popup-state": "^2.0.0",
     "node-sass": "^6.0.1",
@@ -31,7 +33,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
