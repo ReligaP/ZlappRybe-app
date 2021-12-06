@@ -40,7 +40,7 @@ function App() {
         });
     }, []);
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <CssBaseline />
             <Container maxWidth="md" disableGutters={true}>
                 <HeaderNavMenu />
