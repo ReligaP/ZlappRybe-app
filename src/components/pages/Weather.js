@@ -1,5 +1,5 @@
 import { useState , useEffect } from 'react';
-import { MapContainer , Marker , TileLayer } from 'react-leaflet';
+import { MapContainer , TileLayer } from 'react-leaflet';
 import { Box , Typography } from "@mui/material";
 import OpenWeatherApiKey from "../../database/openWeatherApiKey";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
@@ -54,7 +54,6 @@ const Weather = ( props ) => {
                             attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
-                        <Marker position={[props.coords.latitude,props.coords.longitude]} />
                     </MapContainer>
                 </Box>
                 <Box className="weatherBox_searchBox">

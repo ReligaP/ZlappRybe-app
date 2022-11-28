@@ -24,13 +24,6 @@ import app from "./firebase/firebaseconfig";
 function App() {
     const [email, setEmail] = useState("");
     const [local,setLocal] = useState([]);
-    const { coords } =
-        useGeolocated({
-            positionOptions: {
-                enableHighAccuracy: false,
-            },
-            userDecisionTimeout: 100,
-        });
     useEffect(() => {
         const auth = getAuth(app);
         onAuthStateChanged(auth, (user) => {
@@ -55,7 +48,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home/>} />
                     <Route exact path="/danehydro" element={<Rivers/>} />
-                    <Route exact path="/danesynop" element={<Weather coords={coords}/>} />
+                    <Route exact path="/danesynop" element={<Weather />} />
                     <Route exact path="/dodajrelacje" element={<AddRelation local={local} email={email} />} />
                     <Route exact path="/twojerelacje" element={<ShowRelation local={local} email={email} />} />
                     <Route exact path="/logowanie" element={<SignIn email={email} />} />
