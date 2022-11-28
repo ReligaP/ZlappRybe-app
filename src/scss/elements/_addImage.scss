@@ -1,10 +1,7 @@
 .addImageBox {
   background-color:rgba(108,108,233,0.2);
   padding:40px 0;
-  height:calc(100vh - 322.5px);
-  @media (min-width:485px) {
-    height: calc(100vh - 324px);
-  }
+  height:325px;
 
   &_content {
     display:flex;
@@ -12,9 +9,6 @@
     flex-direction:column;
     align-items:center;
     padding-top:40px;
-    @media (min-width:485px) {
-      padding-top:100px;
-    }
 
     &__form {
       padding-top:25px;
@@ -46,14 +40,5 @@
   justify-content:center;
   align-items:center;
   background-color:rgba(108,108,233,0.2);
-  height: calc(100vh - 333px);
-  @media (min-width:485px) {
-    justify-content: flex-start;
-  }
-
-  &_content {
-    @media (min-width:485px) {
-      padding-top:200px;
-    }
-  }
+  height:335px;
 }

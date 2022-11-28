@@ -21,31 +21,9 @@
 
   &_noContent {
     width:90%;
-    height:calc(100vh - 432px);
+    height:300px;
     display:flex;
     justify-content:center;
     align-items:center;
-    @media (min-width:485px) {
-      padding-top: 100px;
-      align-items: flex-start;
-    }
-  }
-}
-
-.noShowImageBox {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  background-color:rgba(108,108,233,0.2);
-  height: calc(100vh - 333px);
-  @media (min-width:485px) {
-    justify-content: flex-start;
-  }
-
-  &_content {
-    @media (min-width:485px) {
-      padding-top:200px;
-    }
   }
 }

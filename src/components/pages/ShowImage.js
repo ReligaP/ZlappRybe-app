@@ -57,7 +57,6 @@ const ShowImage = ( props ) => {
             <Box className="noAddImageBox">
                 <Typography
                     variant="h6"
-                    className="noAddImageBox_content"
                 >
                     Zaloguj się aby zobaczyć swoje zdjęcia
                 </Typography>
