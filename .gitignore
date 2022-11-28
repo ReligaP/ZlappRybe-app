@@ -28,3 +28,5 @@ package-lock.json
 
 /src/firebase/firebaseconfig.js
 /src/database/openWeatherApiKey.js
+
+build
