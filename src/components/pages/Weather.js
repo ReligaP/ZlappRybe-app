@@ -4,7 +4,7 @@ import { Box , Typography } from "@mui/material";
 import OpenWeatherApiKey from "../../database/openWeatherApiKey";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 
-const Weather = ( props ) => {
+const Weather = () => {
     const [city,setCity] = useState("Sandomierz");
     const [temp,setTemp] = useState([]);
     const [wind,setWind] =useState([]);

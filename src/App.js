@@ -2,7 +2,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes , Route } from "react-router";
 import { useEffect , useState } from "react";
 import { getAuth , onAuthStateChanged } from "firebase/auth";
-import { useGeolocated } from "react-geolocated";
 import Home from "./components/pages/Home";
 import Rivers from "./components/pages/Rivers";
 import Weather from "./components/pages/Weather";
