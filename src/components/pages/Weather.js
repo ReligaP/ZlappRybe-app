@@ -1,10 +1,10 @@
 import { useState , useEffect } from 'react';
-import { MapContainer , TileLayer } from 'react-leaflet';
+import { MapContainer , Marker , TileLayer } from 'react-leaflet';
 import { Box , Typography } from "@mui/material";
 import OpenWeatherApiKey from "../../database/openWeatherApiKey";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 
-const Weather = () => {
+const Weather = ( props ) => {
     const [city,setCity] = useState("Sandomierz");
     const [temp,setTemp] = useState([]);
     const [wind,setWind] =useState([]);
@@ -32,7 +32,6 @@ const Weather = () => {
             .then(res => setClouds(res.clouds))
             .catch(err => console.log(err))
     },[API]);
-
     return (
         <>
             <Box className="weatherBox">
@@ -55,6 +54,7 @@ const Weather = () => {
                             attribution='&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
+                        <Marker position={[props.coords.latitude,props.coords.longitude]} />
                     </MapContainer>
                 </Box>
                 <Box className="weatherBox_searchBox">
