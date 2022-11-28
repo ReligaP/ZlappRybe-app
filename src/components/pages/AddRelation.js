@@ -168,7 +168,6 @@ const AddRelation = ( props ) => {
             <Box className="noAddRelationBox">
                 <Typography
                     variant="h6"
-                    className="noRelationBox_content"
                 >
                     Zaloguj się aby dodać swoją relację
                 </Typography>

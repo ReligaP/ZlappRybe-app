@@ -112,7 +112,6 @@ const ShowRelation = ( props ) => {
             <Box className="noRelationBox">
                 <Typography
                     variant="h6"
-                    className="noRelationBox_content"
                 >
                     Zaloguj się aby zobaczyć swoje relację
                 </Typography>

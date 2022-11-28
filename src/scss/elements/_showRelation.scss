@@ -33,7 +33,7 @@
 
   &_norelations {
     width:80%;
-    height:calc(100vh - 425px);
+    height:300px;
     display:flex;
     justify-content:center;
     align-items:flex-start;
@@ -50,14 +50,5 @@
   justify-content:center;
   align-items:center;
   background-color:rgba(108,108,233,0.2);
-  height: calc(100vh - 333px);
-  @media (min-width:485px) {
-    justify-content: flex-start;
-  }
-
-  &_content {
-    @media (min-width:485px) {
-      padding-top:200px;
-    }
-  }
+  height:335px;
 }
