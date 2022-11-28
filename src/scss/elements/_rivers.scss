@@ -1,15 +1,18 @@
 .riversBox {
   background-color: rgba(108,108,233,0.2);
   padding:20px 0 30px 5px;
+
   &_title {
     padding:25px 0;
   }
+
   &_selectBox {
     padding-left:10px;
     @media (min-width:485px) {
       display:flex;
       justify-content: space-around;
     }
+
     &__select {
       margin-bottom:20px;
       &:nth-child(2) {
@@ -19,14 +22,17 @@
       }
     }
   }
+
   &_selectedListTitle {
     display:flex;
     justify-content:center;
     margin:25px 0;
   }
+
   &_selectedList {
     margin-top:20px;
     list-style:none;
+
     &__items {
       padding-left:25px;
       display:flex;
@@ -37,6 +43,7 @@
         align-items:center;
       }
     }
+
     &__link {
       display:flex;
       justify-content:flex-end;
@@ -44,14 +51,17 @@
     }
   }
 }
+
 .selectedList_item {
   margin-bottom:20px;
   display:flex;
   flex-direction:column;
+
   &__paragraph {
     margin:0;
   }
 }
+
 .nativeSelect {
   margin-left:10px;
 }

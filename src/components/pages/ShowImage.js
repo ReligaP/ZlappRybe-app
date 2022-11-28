@@ -1,11 +1,9 @@
-import React, {useEffect, useState} from 'react';
-import {Box} from "@mui/material";
-import {ref,getStorage,getDownloadURL,listAll} from "firebase/storage";
+import { useEffect , useState } from 'react';
+import { ref , getStorage , getDownloadURL , listAll } from "firebase/storage";
+import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
-
-const ShowImage = (props) => {
-
+const ShowImage = ( props ) => {
     const [url, setUrl] = useState([]);
 
     useEffect(() => {
@@ -19,7 +17,7 @@ const ShowImage = (props) => {
         }).catch((err)=> {
             console.log(err)
         })
-    }, );
+    });
     return (
         (props.email) ?
             <Box className="showImageBox">

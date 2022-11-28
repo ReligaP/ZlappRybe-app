@@ -1,5 +1,5 @@
-import React,{useEffect,useState} from 'react';
-import {Box, Typography} from "@mui/material";
+import { useEffect , useState } from 'react';
+import { Box , Typography } from "@mui/material";
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
@@ -58,8 +58,7 @@ const HeaderInfo =() => {
                 </Box>
             </Box>
             <Box className="headerInfoBox_note">
-                <p className="headerInfoBox_note__content"
-                >
+                <p className="headerInfoBox_note__content">
                     * Dane dla miejscowości Piątek(woj.Łódzkie) -geograficzny środek Polski
                 </p>
             </Box>

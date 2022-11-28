@@ -5,6 +5,7 @@
   @media (min-width:485px) {
     height: calc(100vh - 324px);
   }
+
   &_content {
     display:flex;
     justify-content:center;
@@ -14,6 +15,7 @@
     @media (min-width:485px) {
       padding-top:100px;
     }
+
     &__form {
       padding-top:25px;
       width:80%;
@@ -29,12 +31,15 @@
     }
   }
 }
+
 .fileInput {
   margin-bottom:10px;
 }
+
 .confirmIcon {
   color:green;
 }
+
 .noAddImageBox {
   display:flex;
   flex-direction:column;
@@ -45,6 +50,7 @@
   @media (min-width:485px) {
     justify-content: flex-start;
   }
+
   &_content {
     @media (min-width:485px) {
       padding-top:200px;

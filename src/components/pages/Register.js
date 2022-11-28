@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import TextField from "@mui/material/TextField";
+import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import TextField from "@mui/material/TextField";
+import { Box } from "@mui/material";
 import app from "../../firebase/firebaseconfig";
-import {useNavigate} from "react-router";
-import {Box} from "@mui/material";
-
-
 
 const Register = () => {
     const [email, setEmail] = useState("");
@@ -42,7 +40,7 @@ const Register = () => {
                 }
                 console.log(errorCode, errorMessage);
             });
-    }
+    };
 
     return (
         <Box className="registerBox">
@@ -53,7 +51,10 @@ const Register = () => {
                 >
                     Rejestracja
                 </Typography>
-                <form className="registerBox_content__form" onSubmit={e => submitHandler(e)}>
+                <form
+                    className="registerBox_content__form"
+                    onSubmit={e => submitHandler(e)}
+                >
                     <TextField
                         required
                         id="outlined-required"
@@ -76,14 +77,28 @@ const Register = () => {
                         margin="normal"
                     />
                     {
-                        error === true ? <Typography variant="body2" gutterBottom={true} sx={{color:"red"}}>
-                            Podany adres e-mail jest już zajęty.
-                        </Typography>: ""
+                        error === true ?
+                            <Typography
+                                variant="body2"
+                                gutterBottom={true}
+                                sx={{color:"red"}}
+                            >
+                                Podany adres e-mail jest już zajęty.
+                            </Typography>
+                            :
+                            ""
                     }
                     {
-                        second === true ? <Typography variant="body2" gutterBottom={true} sx={{color:"red"}}>
-                            Podane hasło jest zbyt krótkie,powinno mieć co najmniej 6 znaków.
-                        </Typography>: ""
+                        second === true ?
+                            <Typography
+                                variant="body2"
+                                gutterBottom={true}
+                                sx={{color:"red"}}
+                            >
+                                Podane hasło jest zbyt krótkie,powinno mieć co najmniej 6 znaków.
+                            </Typography>
+                            :
+                            ""
                     }
                     <Button
                         variant="contained"

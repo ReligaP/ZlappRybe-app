@@ -8,22 +8,27 @@
   @media (min-width:485px){
     padding:20px 50px;
   }
+
   &_logo {
     display:flex;
     flex-direction:column;
     justify-content:center;
     line-height:15px;
+
     &__title {
       color:darkgreen;
     }
+
     &__title2 {
       color:darkblue;
     }
   }
+
   &_button {
     background-color:rgba(108,108,233,0.7);
   }
 }
+
 .headerNavMenuBox_logo__sign {
   color:black;
 }

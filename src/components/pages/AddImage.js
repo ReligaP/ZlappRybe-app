@@ -1,13 +1,9 @@
-import React,{useState} from 'react';
-import { getStorage,ref,getDownloadURL, uploadBytesResumable } from "firebase/storage";
-import {Box, Button} from "@mui/material";
+import { useState } from 'react';
+import { getStorage , ref , getDownloadURL , uploadBytesResumable } from "firebase/storage";
+import { Box , Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
-
-
-
-const AddImage = (props) => {
-
+const AddImage = ( props ) => {
     const [progress, setProgress] = useState(0);
     const [success,setSuccess] = useState(false);
 
@@ -22,7 +18,6 @@ const AddImage = (props) => {
         const storage=getStorage()
         const storageRef = ref(storage, `/files/${props.local.localId}/${file.name}`);
         const uploadTask = uploadBytesResumable(storageRef, file);
-
         uploadTask.on(
             "state_changed",
             (snapshot) => {
@@ -60,24 +55,32 @@ const AddImage = (props) => {
                         onSubmit={formHandler}
                         className="addImageBox_content__form"
                     >
-                        <input className="fileInput" type="file"/>
+                        <input
+                            className="fileInput"
+                            type="file"
+                        />
                         {
-                            (success === false) ? <Button type="submit">Dodaj</Button> : ""
+                            (success === false) ?
+                                <Button type="submit">
+                                    Dodaj
+                                </Button>
+                                :
+                                ""
                         }
                     </form>
                     {
                         (success === true) ?
-                            (
-                                <Box className="addImageBox_content__success">
-                                    <Typography
-                                        variant="body2"
-                                        align="center"
-                                    >
-                                        Zdjęcie dodane poprawnie w {progress} %
-                                    </Typography>
-                                    <Button onClick={handleClik}>Dodaj kolejne zdjęcie</Button>
-                                </Box>
-                            )
+                            <Box className="addImageBox_content__success">
+                                <Typography
+                                    variant="body2"
+                                    align="center"
+                                >
+                                    Zdjęcie dodane poprawnie w {progress} %
+                                </Typography>
+                                <Button onClick={handleClik}>
+                                    Dodaj kolejne zdjęcie
+                                </Button>
+                            </Box>
                             :
                             ""
                     }
@@ -92,8 +95,7 @@ const AddImage = (props) => {
                     Zaloguj się aby dodać swoje zdjęcia
                 </Typography>
             </Box>
-
-    )
+    );
 };
 
 export default AddImage;

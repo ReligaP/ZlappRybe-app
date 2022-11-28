@@ -4,19 +4,23 @@
   width:100%;
   background-color:rgba(108,108,233,0.1);
   border-bottom:1px solid rgba(108,108,233,0.35);
+
   &_logged {
     display:flex;
     justify-content:center;
     align-items:center;
+
     &__icon {
       color: #017901;
       margin-left:5px;
     }
   }
+
   &_unlogged {
     display:flex;
     justify-content:center;
     align-items:center;
+
     &__icon{
       color:#b30000;
     }

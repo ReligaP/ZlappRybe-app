@@ -1,11 +1,14 @@
-import React from 'react';
-import {Box, Typography} from "@mui/material";
+import { Box , Typography } from "@mui/material";
 
 const Footer = () => {
     return (
         <>
             <Box className="footerBox">
-                <h4><sup>&copy;</sup></h4>
+                <h4>
+                    <sup>
+                        &copy;
+                    </sup>
+                </h4>
                 <Typography
                     className="footerBox_title"
                     variant="h5"
@@ -18,7 +21,9 @@ const Footer = () => {
                 >
                     Rybę
                 </Typography>
-                <Typography variant="h5">2021</Typography>
+                <Typography variant="h5">
+                    2021
+                </Typography>
             </Box>
         </>
     );

@@ -1,14 +1,13 @@
 import { useState } from 'react';
+import { getAuth , signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
+import { Box } from "@mui/material";
 import app from "../../firebase/firebaseconfig";
-import {useNavigate} from "react-router";
-import {Box} from "@mui/material";
 
-
-const SignIn = (props) => {
+const SignIn = ( props ) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error,setError] = useState(false);
@@ -31,7 +30,6 @@ const SignIn = (props) => {
     }
     return (
         (props.email) ?
-
             <Box className="noSignInBox">
                 <Box className="noSignInBox_content">
                     <Typography variant="h6">
@@ -42,8 +40,16 @@ const SignIn = (props) => {
             :
             <Box className="signInBox">
                 <Box className="signInBox_content">
-                    <Typography variant="h6" align="center">Zaloguj się</Typography>
-                    <form className="signInBox_content__form" onSubmit={e => submitHandler(e)}>
+                    <Typography
+                        variant="h6"
+                        align="center"
+                    >
+                        Zaloguj się
+                    </Typography>
+                    <form
+                        className="signInBox_content__form"
+                        onSubmit={e => submitHandler(e)}
+                    >
                         <TextField
                             required
                             id="outlined-required"
@@ -66,9 +72,16 @@ const SignIn = (props) => {
                             margin="normal"
                         />
                         {
-                            error === true ? <Typography variant="body2" gutterBottom={true} sx={{color:"red"}}>
-                                Błędny e-mail lub hasło
-                            </Typography>: ""
+                            error === true ?
+                                <Typography
+                                    variant="body2"
+                                    gutterBottom={true}
+                                    sx={{color:"red"}}
+                                >
+                                    Błędny e-mail lub hasło
+                                </Typography>
+                                :
+                                ""
                         }
                         <Button
                             variant="contained"

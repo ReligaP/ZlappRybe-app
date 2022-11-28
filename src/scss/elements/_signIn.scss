@@ -5,11 +5,13 @@
   @media (min-width:485px) {
     height:calc(100vh - 324px);
   }
+
   &_content {
     display:flex;
     justify-content:center;
     flex-direction:column;
     align-items:center;
+
     &__form {
       padding-top:25px;
       width:80%;
@@ -31,6 +33,7 @@
   @media (min-width: 485px) {
     height: calc(100vh - 324px);
   }
+
   &_content {
     width: 80%;
     height: 200px;

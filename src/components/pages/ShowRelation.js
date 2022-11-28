@@ -1,11 +1,9 @@
-import React,{useState,useEffect}  from "react";
-import {collection, getDocs, getFirestore} from "firebase/firestore";
-import {Box, Typography} from "@mui/material";
+import { useState , useEffect } from "react";
+import { collection , getDocs , getFirestore } from "firebase/firestore";
+import { Box , Typography } from "@mui/material";
 import app from "../../firebase/firebaseconfig";
 
-
-const ShowRelation = (props) => {
-
+const ShowRelation = ( props ) => {
     const [relation, setRelation] = useState([]);
 
     useEffect(() => {
@@ -23,8 +21,7 @@ const ShowRelation = (props) => {
 
     return (
         (props.email) ?
-
-            (<Box className="showRelationBox">
+            <Box className="showRelationBox">
                 <Typography
                     variant="h6"
                     align="center"
@@ -38,34 +35,61 @@ const ShowRelation = (props) => {
                             {
                                 relation.map((el,index)=> {
                                     return (
-                                        <Box key={index} className="showRelationBox_relations__content">
+                                        <Box
+                                            key={index}
+                                            className="showRelationBox_relations__content"
+                                        >
                                             <Box style={{marginBottom:"10px"}}>
                                                 <Typography variant="subtitle2">
                                                     Relacja nr. {index + 1}
                                                 </Typography>
                                             </Box>
-                                            <Typography variant="subtitle2" gutterBottom={true}>
+                                            <Typography
+                                                variant="subtitle2"
+                                                gutterBottom={true}
+                                            >
                                                 {el.data}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Godzina rozpoczęcia: {el.start}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Godzina zakończenia: {el.end}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Miejsce: {el.place}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Opis miejsca: {el.text}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Wyniki: {el.fish}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Pogoda podczas wędkowania: {el.weather}
                                             </Typography>
-                                            <Typography variant="body2" gutterBottom={true}>
+                                            <Typography
+                                                variant="body2"
+                                                gutterBottom={true}
+                                            >
                                                 Dodatkowe info: {el.info}
                                             </Typography>
                                         </Box>
@@ -75,12 +99,15 @@ const ShowRelation = (props) => {
                         </Box>
                         :
                         <Box className="showRelationBox_norelations">
-                            <Typography className="showRelationBox_norelations__content" variant="subtitle2">
+                            <Typography
+                                className="showRelationBox_norelations__content"
+                                variant="subtitle2"
+                            >
                                 Nie masz dodadanych jeszcze żadanych relacji
                             </Typography>
                         </Box>
                 }
-            </Box>)
+            </Box>
             :
             <Box className="noRelationBox">
                 <Typography
@@ -90,7 +117,6 @@ const ShowRelation = (props) => {
                     Zaloguj się aby zobaczyć swoje relację
                 </Typography>
             </Box>
-
     );
 };
 

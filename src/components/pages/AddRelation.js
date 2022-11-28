@@ -1,11 +1,11 @@
-import React, {useState} from "react";
+import { useState } from "react";
+import { addDoc , collection , getFirestore } from "firebase/firestore";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import {Box, Typography} from "@mui/material";
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { Box , Typography } from "@mui/material";
 import app from "../../firebase/firebaseconfig";
 
-const AddRelation = (props) => {
+const AddRelation = ( props ) => {
     const [place, setPlace] = useState("");
     const [text, setText] = useState("");
     const [data,setData] = useState("");
@@ -14,7 +14,7 @@ const AddRelation = (props) => {
     const [end,setEnd] = useState("");
     const [weather,setWeather] = useState("");
     const [success, setSuccess] = useState("");
-    const [info,setInfo] = useState("")
+    const [info,setInfo] = useState("");
 
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -49,7 +49,11 @@ const AddRelation = (props) => {
         (props.email) ?
             <Box className="addRelationBox">
                 <Box className="addRelationBox_content">
-                    <Typography className="addRelationBox_content__title" variant="h6" align="center">
+                    <Typography
+                        className="addRelationBox_content__title"
+                        variant="h6"
+                        align="center"
+                    >
                         Dodaj swoją relację z wędkowania
                     </Typography>
                     {
@@ -169,8 +173,7 @@ const AddRelation = (props) => {
                     Zaloguj się aby dodać swoją relację
                 </Typography>
             </Box>
-    )
+    );
 };
-
 
 export default AddRelation;

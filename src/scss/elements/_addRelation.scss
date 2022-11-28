@@ -8,6 +8,7 @@
   @media (min-width:485px) {
     padding-top:30px;
   }
+
   &_content {
     padding:20px 0;
     width:80%;
@@ -16,19 +17,23 @@
       width:60%;
       padding-bottom:30px;
     }
+
     &__title {
       @media (min-width:485px) {
         padding-bottom:40px;
       }
     }
+
     &__success {
       color:green;
     }
+
     &__submit {
       margin-top:30px;
       display:flex;
       justify-content:flex-end;
     }
+
     &__clear {
       display:flex;
       justify-content:flex-end;
@@ -47,6 +52,7 @@
   @media (min-width:485px) {
     justify-content: flex-start;
   }
+
   &_content {
     @media (min-width:485px) {
       padding-top:200px;

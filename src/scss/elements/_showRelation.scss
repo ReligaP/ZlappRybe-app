@@ -4,15 +4,18 @@
   justify-content:center;
   align-items:center;
   background-color:rgba(108,108,233,0.2);
+
   &_title {
     padding:30px 0;
   }
+
   &_relations {
     width:80%;
     @media (min-width:485px) {
       width:65%;
       padding-bottom: 100px;
     }
+
     &__content {
       background-color:rgba(108,108,233,0.08);
       height:auto;
@@ -27,17 +30,20 @@
       }
     }
   }
+
   &_norelations {
     width:80%;
     height:calc(100vh - 425px);
     display:flex;
     justify-content:center;
     align-items:flex-start;
+
     &__content {
       padding-top:100px;
     }
   }
 }
+
 .noRelationBox {
   display:flex;
   flex-direction:column;
@@ -48,6 +54,7 @@
   @media (min-width:485px) {
     justify-content: flex-start;
   }
+
   &_content {
     @media (min-width:485px) {
       padding-top:200px;

@@ -1,10 +1,9 @@
-import React,{useEffect,useState} from 'react';
-import {Box, Typography} from "@mui/material";
-import {NativeSelect} from "@mui/material";
+import { useEffect , useState } from 'react';
+import { Box , Typography } from "@mui/material";
+import { NativeSelect } from "@mui/material";
 import riversBig10 from "../../database/riversBig10";
 import otherRivers from "../../database/otherRivers";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
-
 
 const Rivers = () => {
     const [river,SetRiver] = useState("Wisła");
@@ -40,11 +39,18 @@ const Rivers = () => {
                             onChange: e => SetRiver(e.target.value),
                         }}
                     >
-                        <option>Wybierz</option>
+                        <option>
+                            Wybierz
+                        </option>
                         {
                             riversBig10.map((el,index) => {
                                 return (
-                                    <option key={index} value={el}>{el}</option>
+                                    <option
+                                        key={index}
+                                        value={el}
+                                    >
+                                        {el}
+                                    </option>
                                 )
                             })
                         }
@@ -61,11 +67,18 @@ const Rivers = () => {
                             onChange: e => SetRiver(e.target.value),
                         }}
                     >
-                        <option>Wybierz</option>
+                        <option>
+                            Wybierz
+                        </option>
                         {
                             otherRivers.map((el,index) => {
                                 return (
-                                    <option key={index} value={el}>{el}</option>
+                                    <option
+                                        key={index}
+                                        value={el}
+                                    >
+                                        {el}
+                                    </option>
                                 )
                             })
                         }
@@ -82,13 +95,15 @@ const Rivers = () => {
                 </Typography>
             </Box>
             <Box className="riversBox_selectedList">
-
                 <ul className="riversBox_selectedList__items">
                     {
                         data.filter(el => (el.rzeka === river)
                         ).map((el,index) => {
                             return (
-                                <li className="selectedList_item" key={index}>
+                                <li
+                                    className="selectedList_item"
+                                    key={index}
+                                >
                                     <Typography variant="subtitle2">
                                         Stacja pomiarowa : {el.stacja}
                                     </Typography>
@@ -118,7 +133,9 @@ const Rivers = () => {
                     }
                 </ul>
                 <Box className="riversBox_selectedList__link">
-                    <a href={"#top"}><ArrowCircleUpIcon/></a>
+                    <a href={"#top"}>
+                        <ArrowCircleUpIcon/>
+                    </a>
                 </Box>
             </Box>
         </Box>
