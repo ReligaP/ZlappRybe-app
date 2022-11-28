@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/ZlappRybe-app/static/css/main.686699a3.chunk.css",
-    "main.js": "/ZlappRybe-app/static/js/main.94242f1a.chunk.js",
-    "main.js.map": "/ZlappRybe-app/static/js/main.94242f1a.chunk.js.map",
+    "main.css": "/ZlappRybe-app/static/css/main.be457e66.chunk.css",
+    "main.js": "/ZlappRybe-app/static/js/main.927da70d.chunk.js",
+    "main.js.map": "/ZlappRybe-app/static/js/main.927da70d.chunk.js.map",
     "runtime-main.js": "/ZlappRybe-app/static/js/runtime-main.13ce6e9c.js",
     "runtime-main.js.map": "/ZlappRybe-app/static/js/runtime-main.13ce6e9c.js.map",
-    "static/js/2.61033b58.chunk.js": "/ZlappRybe-app/static/js/2.61033b58.chunk.js",
-    "static/js/2.61033b58.chunk.js.map": "/ZlappRybe-app/static/js/2.61033b58.chunk.js.map",
+    "static/js/2.697f2553.chunk.js": "/ZlappRybe-app/static/js/2.697f2553.chunk.js",
+    "static/js/2.697f2553.chunk.js.map": "/ZlappRybe-app/static/js/2.697f2553.chunk.js.map",
     "index.html": "/ZlappRybe-app/index.html",
-    "static/css/main.686699a3.chunk.css.map": "/ZlappRybe-app/static/css/main.686699a3.chunk.css.map",
-    "static/js/2.61033b58.chunk.js.LICENSE.txt": "/ZlappRybe-app/static/js/2.61033b58.chunk.js.LICENSE.txt",
+    "static/css/main.be457e66.chunk.css.map": "/ZlappRybe-app/static/css/main.be457e66.chunk.css.map",
+    "static/js/2.697f2553.chunk.js.LICENSE.txt": "/ZlappRybe-app/static/js/2.697f2553.chunk.js.LICENSE.txt",
     "static/media/fishingrod.49de3215.jpg": "/ZlappRybe-app/static/media/fishingrod.49de3215.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.13ce6e9c.js",
-    "static/js/2.61033b58.chunk.js",
-    "static/css/main.686699a3.chunk.css",
-    "static/js/main.94242f1a.chunk.js"
+    "static/js/2.697f2553.chunk.js",
+    "static/css/main.be457e66.chunk.css",
+    "static/js/main.927da70d.chunk.js"
   ]
 }
