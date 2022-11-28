@@ -1,9 +1,9 @@
 .signInBox {
   background-color:rgba(108,108,233,0.2);
   padding:40px 0;
-  height:calc(100vh - 333px);
+  height:340px;
   @media (min-width:485px) {
-    height:calc(100vh - 324px);
+    height:380px;
   }
 
   &_content {

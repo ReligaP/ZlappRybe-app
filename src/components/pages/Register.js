@@ -12,6 +12,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [error,setError]=useState(false);
     const [second,setSecond] = useState(false);
+    const [invalidEmail,setInvalidEmail] = useState(false);
     let navigate = useNavigate();
 
     const submitHandler = (e) => {
@@ -35,8 +36,12 @@ const Register = () => {
                 const errorMessage = error.message;
                 if(errorCode === "auth/email-already-in-use") {
                     setError(true)
-                } if (errorCode === "auth/weak-password") {
+                }
+                if (errorCode === "auth/weak-password") {
                     setSecond(true)
+                }
+                if (errorCode === "auth/invalid-email") {
+                    setInvalidEmail(true)
                 }
                 console.log(errorCode, errorMessage);
             });
@@ -100,10 +105,23 @@ const Register = () => {
                             :
                             ""
                     }
+                    {
+                        invalidEmail === true ?
+                            <Typography
+                                variant="body2"
+                                gutterBottom={true}
+                                sx={{color:"red"}}
+                            >
+                                Nieprawidłowy adres e-mail.
+                            </Typography>
+                            :
+                            ""
+                    }
                     <Button
                         variant="contained"
                         type="submit"
                         size="small"
+                        sx ={{marginTop:"10px"}}
                     >
                         Zarejestruj się
                     </Button>

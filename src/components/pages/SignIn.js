@@ -87,6 +87,7 @@ const SignIn = ( props ) => {
                             variant="contained"
                             type="submit"
                             size="small"
+                            sx ={{marginTop:"10px"}}
                         >
                             Zaloguj się
                         </Button>
